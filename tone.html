@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bất ngờ nhỏ của anh Hảo </title>
+    <link rel="stylesheet" href="./tone.css">
+</head>
+<body>
+    <img id="anh"src="/aa.gif" class="img">
+    <h1 id="cauhoi">  💞Hôm nay 20/10 bạn có muốn nhận bất ngờ từ anh Hảo không?💖 </h1>
+    <div class="tuychon">
+        <button class="coa" onclick="co()"> Đồng ý 😘 </button>
+        <button class="khonga" onclick="khong()"> Từ chối 😢 </button>
+    </div>
+        <button id="nhac" class="nhac" onclick="mo()"> ️Lên nhạc️🎵 </button>
+    <audio id="conhac" src="/evil-laugh-89423.mp3"></audio>
+    <audio id="khongnhac" src="/style_sound_No01.mp3"></audio>
+    <audio id="nhac1" src="soundcloudaud.com_Anh Thanh Niên - HuyR __ Viz Remix.mp3"></audio>
+    <script>
+        const cauhoi = document.getElementById("cauhoi");
+        const anh = document.getElementById("anh");
+        const oldText = cauhoi.innerText;                     //lưu giá trị cũ của ô
+        const oldImg = anh.src;                               //lưu lại đường dẫn hình ảnh trước khi thay đổi
+        const conhac = document.getElementById("conhac");
+        const khongnhac = document.getElementById("khongnhac");
+        const nhac1 = document.getElementById("nhac1");
+        const nut = document.getElementById("nhac");
+        const oldText1 = nut.innerText;
+
+        function mo() {
+          if(nhac1.paused){
+            nhac1.play();
+            nut.innerText = " Tắt nhạc🎵 "
+          } else{
+            nhac1.pause();
+            nut.innerText= " Lên nhạc🎵"
+          }
+        }
+        function co() {
+          conhac.play();
+        // Đổi chữ và ảnh
+      cauhoi.innerText = "Bị lừa rồi con tró 🤣";
+      anh.src = "/khi.webp";
+
+      // Sau 5 giây đổi lại như cũ
+      setTimeout(() => {
+        cauhoi.innerText = oldText;
+        anh.src = oldImg;
+      }, 5000);
+    }
+
+        function khong() {
+          khongnhac.play();                 
+      // Đổi chữ và ảnh
+      cauhoi.innerText = "Đồng ý đi mòa năn nỉ ă 🥺";
+      anh.src = "/lk.gif";
+
+      // Sau 5 giây đổi lại như cũ
+      setTimeout(() => {
+        cauhoi.innerText = oldText;
+        anh.src = oldImg;
+      }, 5000);
+    }
+    </script>
+</body>
+</html>
