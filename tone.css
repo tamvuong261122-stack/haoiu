@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Pacifico', cursive;
+}
+body{
+    background-color: pink;
+    justify-content: center;        /* Canh giữa theo chiều dọc*/
+    align-items: center;            /* Canh giữa theo chiều ngang*/
+    display: flex;                  /* Kích hoạt Flexbox để sắp xếp các phần tử con */
+    flex-direction: column;
+    height: 100vh;                  /* Chiều cao = 100% chiều cao màn hình*/
+    padding: 1rem;                  /* Khoảng cách bên trong 1rem */
+    text-align: center;             /* Căn giữa văn bản*/
+    gap: 1rem;                      /* Khoảng cách giữa các con là 1rem */
+}
+img{
+    width: 60vw;
+    max-width: 250px;
+    height: auto;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+h1{
+    font-weight: bold;
+    color: #ff3399;
+    margin-bottom: 1px;
+    transform: all 0.5s ease;
+}
+.tuychon {
+    display: flex;
+    gap: 14px;                      /* khoảng cách giữa 2 nút */
+    align-items: center;            /* canh giữa theo chiều ngang (tuỳ thích) */
+    justify-content: center;        /* canh giữa theo chiều dọc nếu cần */
+
+}
+.coa, .khonga, .nhac {
+    background-color: rgb(186, 191, 165);
+    color: black;
+    font-weight: bold;
+    width: 200px;                   
+    height: 36px;
+    border-radius: 5px;
+    border: none;
+    font-size: 20px;
+}
+.khonga {
+    background-color: rgb(186, 191, 165);
+    color: black;
+    width: 200px;                   
+    height: 36px;
+    border-radius: 5px;
+    border: none;
+    font-size: 20px;
+}
+.coa:hover{
+    background-color: #66ff99;
+    color: #006600;
+    transform: scale(1.1);
+}
+.khonga:hover{
+    background-color: #ff6666;
+    color: #800000;
+    transform: scale(1.1);
+}
+.nhac:hover{
+    background-color: rgb(0, 255, 55);
+    color: #ed66ff;
+    transform: scale(1.1);
+}
+
